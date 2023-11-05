@@ -10,4 +10,4 @@ export const getNotesList = async ()=>{
         endpoint: "note_app",
     });
     return notes;
-}
+};

@@ -1,7 +1,7 @@
 import { getNotesList } from '@/lib/client';
 import Link from 'next/link' //コレがないとエラー。動画では不要
 
-export default aync function Page(){
+export default async function Page(){
 
     const notelist = await getNotesList();
     console.log(notelist.contents);

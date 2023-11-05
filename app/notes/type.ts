@@ -7,4 +7,4 @@ const zNote = z.object({
     updatedAt: z.string().datetime(),
 });
 
-export type Note = z.infer<typeof zNote>();
+export type Note = z.infer<typeof zNote>

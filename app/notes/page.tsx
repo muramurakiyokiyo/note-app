@@ -1,7 +1,11 @@
 import { getNotesList } from '@/lib/client';
 import Link from 'next/link' //コレがないとエラー。動画では不要
 
-export default function Page(){
+export default aync function Page(){
+
+    const notelist = await getNotesList();
+    console.log(notelist.contents);
+
     return (
         <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-y-10 mt-10'>
             <NoteItem/>

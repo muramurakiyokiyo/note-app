@@ -8,6 +8,9 @@ export const client = createClient({
 
 export const getNotesList = async ()=>{
     const notes = await client.getList<Note>({
+        customRequestInit: {
+            cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+        },
         endpoint: "note_app",
     });
     return notes;
